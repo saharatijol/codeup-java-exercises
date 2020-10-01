@@ -9,6 +9,7 @@ public class ctrlStatementsExercise {
             System.out.print(i + " ");
             i++;
         }
+
         //===== For Loop Refactor
         for (int i = 5; i <= 15; i++) {
             System.out.print(i + " ");
@@ -91,6 +92,7 @@ public class ctrlStatementsExercise {
         //======== Table of Powers ========
         Scanner scanner = new Scanner(System.in);
         String confirmation;
+
         do {
 
             System.out.println("What number would you like to go up to? ");
@@ -107,6 +109,7 @@ public class ctrlStatementsExercise {
             System.out.print("Do you still want to continue? (y/n): ");
             confirmation = scanner.next();
             scanner.nextLine();
+
         } while (confirmation.equals("y"));
         //System.out.println(confirmation);
 
@@ -114,6 +117,7 @@ public class ctrlStatementsExercise {
         //===== Convert given number grades into letter grades =====
         int numGrade;
         String anotherGrade = "y";
+
         do {
             System.out.print("Enter numerical grade from 0 - 100: ");
             numGrade = scanner.nextInt();
@@ -134,6 +138,7 @@ public class ctrlStatementsExercise {
             }
             System.out.println("Enter another grade?: (y/n) ");
             anotherGrade = scanner.next();
+
         } while (anotherGrade.equals("y"));
     }
 }
