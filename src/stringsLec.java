@@ -78,10 +78,5 @@ public class stringsLec {
         String longerStr = "A quick      brown fox jumps    over the      lazy dog      "; //ox jumps over the lazy dog
         System.out.println("Example string with trailing spaces: " + longerStr);
         System.out.println("Using trim() method: " + longerStr.trim());
-
-
-
-
-
     }
 }
