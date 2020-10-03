@@ -9,13 +9,13 @@ public class Bob {
         do {
             System.out.println();
             System.out.println("Ask Bob something: ");
-            String askedBob = scanner.nextLine();
+            String askedBob = scanner.nextLine().trim();
             //System.out.println(askedBob);
             //System.out.println(askedBob.lastIndexOf('?') != -1);
 
-            if (askedBob.lastIndexOf('?') != -1) {
+            if (askedBob.endsWith("?")) {
                 System.out.println("Sure");
-            } else if (askedBob.lastIndexOf('!') != -1) {
+            } else if (askedBob.endsWith("!")) {
                 System.out.println("Whoa, chill out!!");
             } else if (askedBob.equals("")) {
                 System.out.println("Fine! Be that way.");
