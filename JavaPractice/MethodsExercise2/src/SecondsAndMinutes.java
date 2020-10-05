@@ -1,7 +1,7 @@
 public class SecondsAndMinutes {
     /*
     * ====== BONUS =====
-    * For the input 61 minutes, output should be 01h 01m 00s, but it is ok if it is 1h 1m 0s (Tip: use if-else)
+    * For the input 61 minutes, output should be 01h 01m 00s, but it is ok if it's 1h 1m 0s (Tip: use if-else)
     */
 
     public static void main(String[] args) {
@@ -16,7 +16,22 @@ public class SecondsAndMinutes {
             long hours = minutes / 60;
             long remainingMinutes = minutes % 60;
 
-            return hours + "h " + remainingMinutes + "m " + seconds + "s";
+            String hoursString = hours + "h";
+            if(hours < 10) {
+                hoursString = "0" + hoursString;
+            }
+
+            String minutesString = remainingMinutes + "m";
+            if(remainingMinutes < 10) {
+                minutesString = "0" + minutesString;
+            }
+
+            String secondsString = remainingMinutes + "m";
+            if(remainingMinutes < 10) {
+                secondsString = "0" + secondsString;
+            }
+
+            return hoursString + " " + minutesString + " " + secondsString + " ";
         }
     }
 
