@@ -11,7 +11,19 @@ public class Post {
     public static String nameOfBlog = "Justin's Blog";
 
     // title
-    public String title;
+    private String title;
+
+    // getter for title
+    public String getTitle() {
+        return this.title;
+        //this.title.toUpperCase();
+    }
+
+    // setter for title
+    public void setTitle(String title) {
+        this.title = title;
+        //this.title = title.toLowerCase();
+    }
 
     // author
     public String authorName;
@@ -24,6 +36,18 @@ public class Post {
 
     // dateEdited
     public Date dateEdited;
+
+    // constructor
+    public Post (String title) {
+        this.title = title;
+        this.authorName = "";
+    }
+
+    // constructor
+    public Post(String title, String authorName) {
+        this.title = title;
+        this.authorName = authorName;
+    }
 
     // display title and authorName
     public void printTitleAndAuthor() {
@@ -41,13 +65,17 @@ public class Post {
     }
 
     public static void main(String[] args) {
-        Post p = new Post();
-        p.title = "A Day in the Life";
-        p.content = "I am what I am";
-        p.datePosted = new Date();
-        p.dateEdited = new Date();
-        p.authorName = "Max Smith";
+        Post p = new Post("A Day in the Life", "Max Smith");
+//        Post p = new Post();
+//        p.title = "A Day in the Life";
+//        p.content = "I am what I am";
+//        p.datePosted = new Date();
+//        p.dateEdited = new Date();
+//        p.authorName = "Max Smith";
 
-        p.printTitleAndAuthor();
+        //p.printTitleAndAuthor();
+
+        // If I don't have a constructor, is there a constructor?
+        // -yes there is, it will create  a new constructor
     }
 }
