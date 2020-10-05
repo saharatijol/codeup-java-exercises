@@ -4,11 +4,11 @@ public class ControlFlowExercises {
     public static void main(String[] args) {
 
         //======== 1. Loop Basics: While =========
-        int i = 5;
-        while (i <= 15) {
-            System.out.print(i + " ");
-            i++;
-        }
+//        int i = 5;
+//        while (i <= 15) {
+//            System.out.print(i + " ");
+//            i++;
+//        }
 
         //===== For Loop Refactor
         for (int i = 5; i <= 15; i++) {
@@ -17,11 +17,11 @@ public class ControlFlowExercises {
 
 
         //===== Do-while: Part 1 =====
-        int count = 0;
-        do {
-            System.out.println(count);
-            count += 2;
-        } while (count < 101);
+//        int count = 0;
+//        do {
+//            System.out.println(count);
+//            count += 2;
+//        } while (count < 101);
 
         //===== For-Loop Refactor
         for (int count = 0; count <= 100; count += 2) {
@@ -29,11 +29,11 @@ public class ControlFlowExercises {
         }
 
         //====== Do-while: Part 2 =====
-        int count2 = 100;
-        do {
-            System.out.println(count2);
-            count2 -= 5;
-        } while (count2 >= -10);
+//        int count2 = 100;
+//        do {
+//            System.out.println(count2);
+//            count2 -= 5;
+//        } while (count2 >= -10);
 
         //===== For-Loop Refactor
         for (int count2 = 100; count2 >= -10; count2 -= 5) {
@@ -41,14 +41,14 @@ public class ControlFlowExercises {
         }
 
         //======= Do-while: Part 3 ======
-        int count3 = 2;
-        do {
-            //count3 = count3 * count3;
-            //System.out.println(square);
-            System.out.println(count3);
-            count3 = (int)Math.pow(count3, 2);
-        }
-        while (count3 < 1000000);
+//        int count3 = 2;
+//        do {
+//            //count3 = count3 * count3;
+//            //System.out.println(square);
+//            System.out.println(count3);
+//            count3 = (int)Math.pow(count3, 2);
+//        }
+//        while (count3 < 1000000);
 
         //===== For-Loop Refactor
         for (int count3 = 2; count3 < 1000000; count3 = (int)Math.pow(count3, 2)) {
@@ -103,8 +103,8 @@ public class ControlFlowExercises {
             System.out.println("number | squared | cubed");
             System.out.println("------ | ------- | -----");
 
-            for (int i = 1; i <= userInput; i++) {
-                System.out.printf(" %-5d | %-7d | %-2d \n", i, i * i, i * i * i);
+            for (int numTable = 1; numTable <= userInput; numTable++) {
+                System.out.printf(" %-5d | %-7d | %-2d \n", numTable, numTable * numTable, numTable * numTable * numTable);
             }
             System.out.print("Do you still want to continue(y/n)?: ");
             confirmation = scanner.next();

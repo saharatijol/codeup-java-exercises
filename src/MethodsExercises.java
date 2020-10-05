@@ -106,7 +106,6 @@ public class MethodsExercises {
                 System.out.printf("Factorial of %d is %d \n", userInput, result);
                 System.out.print("Do you want to continue (y/n): ");
                 tryAgain = scanner.next();
-                //return result;
             }
 
         } while(tryAgain.equals("y"));
