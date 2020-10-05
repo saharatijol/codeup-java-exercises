@@ -3,16 +3,33 @@ import org.w3c.dom.ls.LSOutput;
 import java.util.Scanner;
 
 public class MethodsExercises {
+
+    // TODO: Change println to return values in methods
+    // TODO: Have the println in your main method instead
+
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 //        addition(5, 5);
 //        subtraction(10, 5);
 //        multiplication(7,  5);
 //        multiplication2(7, 5);
 //        division(24, 5);
 //        modulus(7,3);
-//        getInteger(1, 10);
+        getInteger(1, 10);
 
-        factorial();
+        //factorial();
+        // #3 Factorial Problem
+        while(true){
+            System.out.println("factorial() = " + factorial());
+            System.out.println("Do you want to continue? y/n");
+            String answer = scan.nextLine();
+            if (answer.equalsIgnoreCase("n")) {
+                System.out.println("Ok, goodbye!");
+                break;
+            }
+        }
+        // #4 Dice Roll Problem
+        rollDice(scan);
     }
 
     // 1. Basic Arithmetic
@@ -63,9 +80,27 @@ public class MethodsExercises {
             System.out.println("Input is invalid. Try again...");
             return userInput = getInteger(1, 10);
         } else {
+            System.out.println("Thanks!!");
             return userInput;
         }
     }
+
+    // Using recursion on #2
+//    public static int getInteger(int min, int max) {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Give me a number between " + min + " and  " + max + ": ");
+//        int userInput = Integer.parseInt(scanner.nextLine());
+//
+//        if (userInput < min) {
+//            System.out.println("This number is lower than " + min);
+//            return getInteger(min, max);
+//        } else if (userInput > max) {
+//            System.out.println("This number is bigger than " + max);
+//            return getInteger(min, max);
+//        }
+//        System.out.println("Thanks!!!");
+//        return userInput;
+//    }
 
     // Overloading getInteger() method
     public static int getInteger() {
@@ -82,37 +117,65 @@ public class MethodsExercises {
     }
 
     // 3. Calculate factorial
+//    public static long factorial() {
+//        String tryAgain = "y";
+//        long result;
+//
+//        do {
+//            Scanner scanner = new Scanner(System.in);
+//            System.out.print("Enter an integer between 1 and 10: ");
+//            long userInput = scanner.nextInt();
+//            System.out.println("User entered: " + userInput);
+//
+//            if (userInput < 1 || userInput > 10) {
+//                System.out.println("Invalid input.... Try again...");
+//                return factorial();
+//            }
+//            else {
+//                result = 1;
+//
+//                for (int i = 1; i <= userInput; i++) {
+//                    result = result * i;
+//                }
+//
+//                System.out.printf("Factorial of %d is %d \n", userInput, result);
+//                System.out.print("Do you want to continue (y/n): ");
+//                tryAgain = scanner.next();
+//            }
+//
+//        } while(tryAgain.equals("y"));
+//        return result;
+//    }
+
+    // #3 Walk through solution
     public static long factorial() {
-        String tryAgain = "y";
-        long result;
-
-        do {
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Enter an integer between 1 and 10: ");
-            long userInput = scanner.nextInt();
-            System.out.println("User entered: " + userInput);
-
-            if (userInput < 1 || userInput > 10) {
-                System.out.println("Invalid input.... Try again...");
-                return factorial();
-            }
-            else {
-                result = 1;
-
-                for (int i = 1; i <= userInput; i++) {
-                    result = result * i;
-                }
-
-                System.out.printf("Factorial of %d is %d \n", userInput, result);
-                System.out.print("Do you want to continue (y/n): ");
-                tryAgain = scanner.next();
-            }
-
-        } while(tryAgain.equals("y"));
-        return result;
+        int userInput = getInteger(1, 10);
+        long output = 1;
+        for (int counter = 1; counter <= userInput; counter++) {
+            output *= counter;
+        }
+        return output;
     }
 
     // 4. Dice Rolling
+    public static void randomize (short sides) {
+        System.out.println( (int) Math.floor(Math.random() * sides + 1) );
+        System.out.println( (int) Math.floor(Math.random() * sides + 1) );
+    }
 
-
+    public static void rollDice(Scanner scan){
+        int counter = 0;
+        while (true) {
+            counter++;
+            System.out.println("Roll Dice method");
+            System.out.println("Number of sides: ");
+            short sides = Short.parseShort(scan.nextLine());
+            randomize(sides);
+            System.out.println("Do you want to continue? y/n");
+            if (scan.nextLine().equalsIgnoreCase("n")) {
+                System.out.println("Ok, goodbye, you played " + counter + " times");
+                break;
+            }
+        }
+    }
 }
