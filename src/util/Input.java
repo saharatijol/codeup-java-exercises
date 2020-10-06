@@ -27,6 +27,19 @@ public class Input {
         }
     }
 
+    public boolean yesNo(String prompt) {
+        System.out.println(prompt);
+        String choice = scanner.nextLine();
+        if (choice.equalsIgnoreCase("yes") || choice.equalsIgnoreCase("y")) {
+            return true;
+        } else if (choice.equalsIgnoreCase("no") || choice.equalsIgnoreCase("n")) {
+            return false;
+        } else {
+            System.out.println("What is that? That's not an option.. Again");
+            return yesNo(prompt);
+        }
+    }
+
     public int getInt(int min, int max) {
         System.out.printf("Enter number between %d and %d: ", min, max);
         int guessNum = parseInt(scanner.nextLine());
@@ -52,13 +65,13 @@ public class Input {
         System.out.printf("Enter number between %s and %s: ", min, max);
         double guessDouble = parseDouble(scanner.nextLine());
         if (guessDouble > max) {
-            System.out.println("You're above range.. Again ");
+            System.out.println("You're ABOVE range.. Again ");
             return getDouble(min, max);
         } else if (guessDouble < min) {
-            System.out.println("You're below range.. Again");
+            System.out.println("You're BELOW range.. Again");
             return getDouble(min, max);
         } else {
-            System.out.println("You within range... Next");
+            System.out.println("You WITHIN range... Next");
             return guessDouble;
         }
 
@@ -66,6 +79,12 @@ public class Input {
 
     public double getDouble() {
         System.out.println("Enter a number with decimal: ");
+        double numDouble = parseDouble(scanner.nextLine());
+        return numDouble;
+    }
+
+    public double getDouble(String prompt) {
+        System.out.println(prompt);
         double numDouble = parseDouble(scanner.nextLine());
         return numDouble;
     }
