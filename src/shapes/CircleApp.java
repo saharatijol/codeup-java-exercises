@@ -6,7 +6,7 @@ public class CircleApp {
 
     public static void main(String[] args) {
         boolean again = false;
-
+        int count = 0;
         do {
 
             Input radius = new Input();
@@ -22,8 +22,9 @@ public class CircleApp {
             System.out.println("Circumference: " + circumference);
 
             again = radius.yesNo("Do you want to continue? (y/n): ");
-
+            count++;
         } while(again);
+        System.out.printf("Circles created: %d \n", count);
         System.out.println("Exiting loop....");
     }
 }
