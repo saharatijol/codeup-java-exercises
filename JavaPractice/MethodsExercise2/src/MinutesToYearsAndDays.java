@@ -4,6 +4,7 @@ public class MinutesToYearsAndDays {
         System.out.println((printYearsAndDays(525600)));
         System.out.println((printYearsAndDays(1051200)));
         System.out.println((printYearsAndDays(561600)));
+        System.out.println((printYearsAndDays(-561600)));
     }
 
     public static String printYearsAndDays (long minutes) {
@@ -17,6 +18,6 @@ public class MinutesToYearsAndDays {
         long years = days / 365;
         long remainingYears = days % 365;
 
-        return minutes + " min = " + years + "y " + "and " + remainingYears + "d";
+        return minutes + " min = " + years + "y" + " and " + remainingYears + "d";
     }
 }
