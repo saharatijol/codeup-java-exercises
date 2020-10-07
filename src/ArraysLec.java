@@ -6,8 +6,12 @@ public class ArraysLec {
 
         String[] names = {"Fer", "Douglas", "Daniel"};
         double[] prices = new double[3]; // *you can't change the size of an array once it is created
-        int [] numbers = new int[8];
-        int [] otherNumbers = new int[8];
+        int[] numbers = new int[8];
+        int[] otherNumbers = new int[8];
+        Person[] persons = new Person[2];
+
+        persons[0] = new Person("Fer");
+        persons[1] = new Person("Nando");
 
         prices[0] = Double.parseDouble("1.0");
         prices[1] = 2.0 * 2;
@@ -28,7 +32,7 @@ public class ArraysLec {
         }
 
 
-        for (String name: names) {
+        for (String name : names) {
             System.out.println("name = " + name);
         }
 
@@ -53,6 +57,38 @@ public class ArraysLec {
         System.out.println("copyOfNames = " + copyOfNames.length);
         copyOfNames[3] = "Justin";
         System.out.println("Arays.toString(copyOfNames) = " + Arrays.toString(copyOfNames));
+
+        // *** Multi-Dimensional Arrays
+        int[][] matrix = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+        // access the first element in the second row
+            System.out.println(matrix[1][0]); // 4
+        // the last element in the first row
+            System.out.println(matrix[0][2]); // 3
+        // the first element in the last row
+            System.out.println(matrix[2][0]); // 7
+
+        for (int[] row : matrix) {
+            System.out.println("+---+---+---+");
+            System.out.print("| ");
+
+            for (int cell : row) {
+                System.out.print(cell + " | ");
+            }
+            System.out.println();
+        }
+        System.out.println("+---+---+---+");
+        System.out.println("Matrix length = " + matrix.length);
+
+        // Create an Array that holds Objects
+        for (Person person: persons) {
+            person.sayHello();
+            System.out.println("Hi " + person.getName() + ", welcome to my world");
+        }
 
     }
 }
