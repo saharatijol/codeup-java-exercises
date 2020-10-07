@@ -12,9 +12,14 @@ public class DayOfTheWeek {
         printDayOfTheWeek(7);
     }
 
+<<<<<<< HEAD
     private static void printDayOfTheWeek (int day) {
 
         switch(day) {
+=======
+    private static void printDayOfTheWeek(int day) {
+        switch (day) {
+>>>>>>> 1f297721900aa89268b118c89cf46d41fa9275eb
             case 0:
                 System.out.println("Sunday");
                 break;
@@ -38,7 +43,13 @@ public class DayOfTheWeek {
                 break;
             default:
                 System.out.println("I don't think that's a day");
+<<<<<<< HEAD
                 break;
         }
     }
 }
+=======
+        }
+    }
+}
+>>>>>>> 1f297721900aa89268b118c89cf46d41fa9275eb

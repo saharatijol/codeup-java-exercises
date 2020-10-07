@@ -4,12 +4,19 @@ public class NumberInWord {
         printNumberInWord(-1);
         printNumberInWord(0);
         printNumberInWord(5);
+<<<<<<< HEAD
 
     }
 
     public static void printNumberInWord (int number) {
 
         switch(number) {
+=======
+    }
+
+    public static void printNumberInWord(int number) {
+        switch (number) {
+>>>>>>> 1f297721900aa89268b118c89cf46d41fa9275eb
             case 0:
                 System.out.println("ZERO");
                 break;
@@ -42,7 +49,14 @@ public class NumberInWord {
                 break;
             default:
                 System.out.println("OTHER");
+<<<<<<< HEAD
                 break;
         }
     }
+=======
+        }
+
+    }
+
+>>>>>>> 1f297721900aa89268b118c89cf46d41fa9275eb
 }
