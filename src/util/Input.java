@@ -72,6 +72,13 @@ public class Input {
         return number;
     }
 
+    // Optional String prompt
+    public int getInt(String prompt) {
+        System.out.println(prompt);
+        int number = parseInt(scanner.nextLine());
+        return number;
+    }
+
     public double getDouble(double min, double max) {
         System.out.printf("Enter number between %s and %s: ", min, max);
         double guessDouble = parseDouble(scanner.nextLine());
