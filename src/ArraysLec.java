@@ -56,7 +56,7 @@ public class ArraysLec {
 
         System.out.println("copyOfNames = " + copyOfNames.length);
         copyOfNames[3] = "Justin";
-        System.out.println("Arays.toString(copyOfNames) = " + Arrays.toString(copyOfNames));
+        System.out.println("Arrays.toString(copyOfNames) = " + Arrays.toString(copyOfNames));
 
         // *** Multi-Dimensional Arrays
         int[][] matrix = {
