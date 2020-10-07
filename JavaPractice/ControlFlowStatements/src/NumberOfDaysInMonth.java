@@ -8,10 +8,6 @@ public class NumberOfDaysInMonth {
         System.out.println(getDaysInMonth(1, -2020));
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 1f297721900aa89268b118c89cf46d41fa9275eb
     public static boolean isLeapYear (int year) {
         if (year < 1 || year > 9999) {
             return false;
@@ -62,8 +58,7 @@ public class NumberOfDaysInMonth {
             }
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 1f297721900aa89268b118c89cf46d41fa9275eb
+
+
+
