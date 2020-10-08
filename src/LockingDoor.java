@@ -11,7 +11,7 @@ public class LockingDoor extends Door {
     }
 
     public void unlock() {
-        if (!locked) {
+        if (!this.locked) {
             System.out.println("The door is already unlocked.\n");
             return;
         }
@@ -20,7 +20,7 @@ public class LockingDoor extends Door {
     }
 
     public void lock() {
-        if (locked) {
+        if (this.locked) {
             System.out.println("The door is already locked.\n");
             return;
         }

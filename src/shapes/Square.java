@@ -2,6 +2,7 @@ package shapes;
 
 public class Square extends Rectangle {
     private double side;
+
     // Constructor
     public Square (double side) {
         super(side, side);
