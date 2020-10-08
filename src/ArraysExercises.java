@@ -29,6 +29,7 @@ public class ArraysExercises {
 
         copyPerson[copyPerson.length - 1] = addPerson;
         System.out.println("=== Copy of Person object that holds an array w/ added person ===");
+
         for (Person addedPerson: copyPerson) {
             System.out.println(addedPerson.getName());
         }

@@ -1,11 +1,11 @@
 public class DigitSum {
 
     public static void main(String[] args) {
-        System.out.println("Sum of digits in number sumDigits(125) is " + sumDigits(125));
-        System.out.println("Sum of digits in number sumDigits(-125) is " + sumDigits(-125));
-        System.out.println("Sum of digits in number sumDigits(4) is " + sumDigits(4));
-        System.out.println("Sum of digits in number sumDigits(32123) is " + sumDigits(32123));
-        System.out.println("Sum of digits in number sumDigits(58763) is " + sumDigits(58763));
+        System.out.println("Sum of digits in number sumDigits(125) is " + sumDigits(12556));
+//        System.out.println("Sum of digits in number sumDigits(-125) is " + sumDigits(-125));
+//        System.out.println("Sum of digits in number sumDigits(4) is " + sumDigits(4));
+//        System.out.println("Sum of digits in number sumDigits(32123) is " + sumDigits(32123));
+//        System.out.println("Sum of digits in number sumDigits(58763) is " + sumDigits(58763));
     }
 
     private static int sumDigits (int number) {
@@ -17,11 +17,14 @@ public class DigitSum {
         // 125 -> 125 / 10 = 12 -> 12 * 10 = 120 -> 125 - 120 = 5 ===> a way get the least significant digit
         while(number > 0) {
             // extract the least-significant digit
+            //System.out.println(sum);
             int digit = number % 10;
             sum += digit;
-
+            System.out.println("Sum = " + sum);
+            System.out.println(number);
             // drop the least-significant digit
             number /= 10; // same as number = number / 10;
+            System.out.println(number);
         }
         return sum;
     }
