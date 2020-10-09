@@ -1,7 +1,6 @@
 package abstract_interface;
 
 abstract class Employee extends Person implements Worker {
-    protected String name;
     protected String department;
 
     public Employee(String name, String department) {
@@ -9,11 +8,8 @@ abstract class Employee extends Person implements Worker {
         this.department = department;
     }
 
-    public String getName() {
-        return name;
-    }
     public String getDepartment() {
-        return department;
+        return this.department;
     }
 
     @Override
