@@ -22,7 +22,7 @@ public class ShapesTest {
         System.out.println("getPerimeter() = " + box3.getPerimeter());
         System.out.println("getArea() = " + box3.getArea());
 
-        // BOX 4 Method Overriding
+        // BOX 4 Method Overriding : (Test)
         Rectangle box4 = new Rectangle(4, 5);
         System.out.println("---- BOX 4 ----");
         System.out.println("getPerimeter() = " + box4.getPerimeter());

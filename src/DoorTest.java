@@ -32,7 +32,6 @@ public class DoorTest {
         for (Door door : doors) {
             door.open();
         }
-
     }
 }
 
