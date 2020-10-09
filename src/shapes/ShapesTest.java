@@ -4,40 +4,16 @@ public class ShapesTest {
 
     public static void main(String[] args) {
 
-        // BOX 1
-        Rectangle box1 = new Rectangle (4, 5);
-        System.out.println("---- BOX 1 ----");
-        System.out.println("getPerimeter() = " + box1.getPerimeter());
-        System.out.println("getArea() = " + box1.getArea());
+        Measurable myShape;
 
-        // BOX 2
-        Rectangle box2 = new Square (5);
-        System.out.println("---- BOX 2 ----");
-        System.out.println("getPerimeter() = " + box2.getPerimeter());
-        System.out.println("getArea() = " + box2.getArea());
+        myShape = new Rectangle(5, 4);
+        System.out.println("Rectangle: myShape.getPerimeter() = " + myShape.getPerimeter());
+        System.out.println("Rectangle: myShape.getArea() = " + myShape.getArea());
 
-        // BOX 3 Method Overriding
-        Rectangle box3 = new Square(5);
-        System.out.println("---- BOX 3 ----");
-        System.out.println("getPerimeter() = " + box3.getPerimeter());
-        System.out.println("getArea() = " + box3.getArea());
 
-        // BOX 4 Method Overriding : (Test)
-        Rectangle box4 = new Rectangle(4, 5);
-        System.out.println("---- BOX 4 ----");
-        System.out.println("getPerimeter() = " + box4.getPerimeter());
-        System.out.println("getArea() = " + box4.getArea());
+        myShape = new Square(5);
+        System.out.println("Square: myShape.getPerimeter() = " + myShape.getPerimeter());
+        System.out.println("Square: myShape.getArea() = " + myShape.getArea());
 
-        // Walk thru
-        Rectangle[] group = new Rectangle[2];
-
-        group[0] = new Rectangle (4, 5);
-        // polymorph
-        group[1] = new Square(5);
-        System.out.println("==== Using Loop to print thru ====");
-        for (Rectangle rect : group) {
-            System.out.println("rect.getArea() = " + rect.getArea());
-            System.out.println("rect.getPerimeter() = " + rect.getPerimeter());
-        }
     }
 }
