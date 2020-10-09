@@ -1,4 +1,4 @@
-public class SlidingDoor extends Door {
+public final class SlidingDoor extends Door {
 
     public SlidingDoor(String description) {
         super(description);
@@ -11,5 +11,6 @@ public class SlidingDoor extends Door {
 
     public void close() {
         System.out.printf("Attempting to close the %s door. \n", this.description);
+        super.close();
     }
 }

@@ -22,7 +22,7 @@ public class Door {
 
     public void open() {
         if (this.open) {
-            System.out.printf("The $s door is already open\n", this.description);
+            System.out.printf("The $s door is already opened\n", this.description);
         }
         System.out.printf("Opening the %s door.\n", this.description);
         this.open = false;
