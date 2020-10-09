@@ -3,8 +3,8 @@ package abstract_interface;
 public class Person {
     private String name;
 
-    public Person(String personName) {
-        this.name = personName;
+    public Person(String name) {
+        this.name = name;
     }
 
     public String getName() {

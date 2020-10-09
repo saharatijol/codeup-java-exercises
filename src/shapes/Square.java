@@ -1,8 +1,6 @@
 package shapes;
 
 public class Square extends Quadrilateral {
-    protected double length;
-    protected double width;
 
     public Square(double side) {
         super(side, side);
@@ -10,12 +8,21 @@ public class Square extends Quadrilateral {
 //        this.width = side;
     }
 
- // Setters
-//    public void setSide(double side) {
-//        this.length = side;
-//        this.width = side;
-//    }
+    public void setSide(double side) {
+        this.length = side;
+        this.width = side;
+    }
 
+
+    @Override
+    public void setLength(double side) {
+        this.setSide(side);
+    }
+
+    @Override
+    public void setWidth(double side) {
+        this.setSide(side);
+    }
 
     @Override
     public double getArea() {
@@ -27,13 +34,4 @@ public class Square extends Quadrilateral {
         return 4 * this.length;
     }
 
-    @Override
-    public void setLength(double length) {
-        this.length = length;
-    }
-
-    @Override
-    public void setWidth(double width) {
-        this.width = width;
-    }
 }
