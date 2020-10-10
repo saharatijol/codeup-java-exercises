@@ -2,26 +2,24 @@ public class NumberPalindrome {
 
     public static void main(String[] args) {
         System.out.println("isPalindrome(-1221) = " + isPalindrome(-1221));
-        System.out.println("isPalindrome(707) = " + isPalindrome(-1221));
-        System.out.println("isPalindrome(12212) = " + isPalindrome(-1221));
-        System.out.println("isPalindrome(121) = " + isPalindrome(-1221));
-        System.out.println("isPalindrome(121) = " + isPalindrome(-1221));
-        System.out.println("isPalindrome(12321) = " + isPalindrome(-1221));
-        System.out.println("isPalindrome(10011) = " + isPalindrome(-1221));
+        System.out.println("isPalindrome(707) = " + isPalindrome(707));
+        System.out.println("isPalindrome(12212) = " + isPalindrome(11212));
+        System.out.println("isPalindrome(121) = " + isPalindrome(121));
+        System.out.println("isPalindrome(121) = " + isPalindrome(12321));
+        System.out.println("isPalindrome(12321) = " + isPalindrome(1001));
     }
 
     public static boolean isPalindrome(int number) {
-        int reversedNumber = 0;
+        int reversed = 0;
         int remainder;
-
-        int originalNumber = number;
+        int originalNum = number;
 
         while( number != 0 ) {
             remainder = number % 10;
-            reversedNumber = reversedNumber * 10 + remainder;
+            reversed = reversedNum * 10 + remainder;
             number /= 10;
         }
-        return originalNumber == reversedNumber;
+        return originalNum == reversedNumber;
     }
 }
 
