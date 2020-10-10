@@ -16,10 +16,10 @@ public class NumberPalindrome {
 
         while( number != 0 ) {
             remainder = number % 10;
-            reversed = reversedNum * 10 + remainder;
+            reversed = reversed * 10 + remainder;
             number /= 10;
         }
-        return originalNum == reversedNumber;
+        return originalNum == reversed;
     }
 }
 
