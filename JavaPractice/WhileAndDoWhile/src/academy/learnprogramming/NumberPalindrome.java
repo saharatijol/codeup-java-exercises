@@ -1,5 +1,6 @@
-public class NumberPalindrome {
+package academy.learnprogramming;
 
+public class NumberPalindrome {
     public static void main(String[] args) {
         System.out.println("isPalindrome(-1221) = " + isPalindrome(-1221));
         System.out.println("isPalindrome(707) = " + isPalindrome(-1221));
@@ -10,18 +11,20 @@ public class NumberPalindrome {
         System.out.println("isPalindrome(10011) = " + isPalindrome(-1221));
     }
 
+
     public static boolean isPalindrome(int number) {
-        int reversedNumber = 0;
-        int remainder;
+        boolean palindrome = false;
+        int reversed = 0;
+        int testNumber = number;
 
-        int originalNumber = number;
-
-        while( number != 0 ) {
-            remainder = number % 10;
-            reversedNumber = reversedNumber * 10 + remainder;
-            number /= 10;
+        while (testNumber != 0) {
+            int digit = testNumber % 10;
+            reversed = reversed * 10 + digit;
+            testNumber /= 10;
         }
-        return originalNumber == reversedNumber;
+        if (number == reversed) {
+            palindrome = true;
+        }
+        return palindrome;
     }
 }
-
