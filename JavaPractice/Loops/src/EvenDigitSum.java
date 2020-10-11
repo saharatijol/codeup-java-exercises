@@ -1,13 +1,24 @@
 public class EvenDigitSum {
 
-    /*
-    * Write a method named getEvenDigitSum with one parameter of type int called number.
-    * The method should return the sum of the even digits within the number
-    * If number is negative, the method should return -1 to indicate invalid value
-    *
-    * Example input/output
-    * getEvenDigitSum(123456789); -> 20
-    * getEvenDigitSum(252); -> 4
-    * getEvenDigitSum(-22); -> -1
-    * */
+    public static void main(String[] args) {
+        System.out.println(getEvenDigitSum(123456789));
+        System.out.println(getEvenDigitSum(252));
+        System.out.println(getEvenDigitSum(-22));
+    }
+
+    public static int getEvenDigitSum (int number) {
+        if (number < 0) {
+            return -1;
+        } else {
+            int sumEven = 0;
+            while (number > 0) {
+                int digit = number % 10;
+                if (digit % 2 == 0) {
+                    sumEven += digit;
+                }
+                number /= 10;
+            }
+            return sumEven;
+        }
+    }
 }
