@@ -12,12 +12,12 @@ public class DigitSum {
         if (number < 10) {
             return -1;
         } else {
-            int sum;
-            for(sum = 0; number > 0; number /= 10) {
+            int sum = 0;
+            while (number > 0) {
                 int digit = number % 10;
                 sum += digit;
+                number /= 10;
             }
-
             return sum;
         }
     }
