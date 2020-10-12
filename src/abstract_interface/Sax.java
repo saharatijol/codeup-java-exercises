@@ -12,6 +12,10 @@ public class Sax extends MusicalInstrument implements Tuneable, VolumeAdjustable
         return this.saxType;
     }
 
+    public void setSaxType() {
+        this.saxType = saxType;
+    }
+
     @Override
     public void startMusic() {
         System.out.println("some sexy Kenny Roger tune.... yum..");
@@ -30,5 +34,15 @@ public class Sax extends MusicalInstrument implements Tuneable, VolumeAdjustable
     @Override
     public void volumeDown() {
         System.out.println("Decrescendo....");
+    }
+
+    @Override
+    public void tuneInstrument() {
+        System.out.println("It sounds off key, tune it");
+    }
+
+    @Override
+    public void detuneInstrument() {
+        System.out.println("Standard tuning is overrated... Change it");
     }
 }
