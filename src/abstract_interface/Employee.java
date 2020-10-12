@@ -12,9 +12,9 @@ abstract class Employee extends Person implements Worker {
         return this.department;
     }
 
+
     @Override
     public void sayHello() {
         System.out.printf("Hello my name is %s. I work in %s\n", this.getName(), this.getDepartment());
     }
-    public abstract String work();
 }

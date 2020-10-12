@@ -1,6 +1,7 @@
 package abstract_interface;
 
-public abstract class Developer extends Employee {
+public class Developer extends Employee {
+
     public Developer (String name, String department) {
         super(name, department);
     }
@@ -9,7 +10,7 @@ public abstract class Developer extends Employee {
         super(name, "Development");
     }
 
-    public String work() {
-        return "writing code";
+    public void doWork() {
+        System.out.println("typing some code.....");
     }
 }
