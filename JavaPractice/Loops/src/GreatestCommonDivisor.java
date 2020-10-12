@@ -5,6 +5,7 @@ public class GreatestCommonDivisor {
         System.out.println(getGreatestCommonDivisor(12, 30));
         System.out.println(getGreatestCommonDivisor(9, 18));
         System.out.println(getGreatestCommonDivisor(81, 153));
+        System.out.println(getGreatestCommonDivisor(1010, 10));
     }
 
     public static int getGreatestCommonDivisor (int first, int second) {
@@ -12,7 +13,7 @@ public class GreatestCommonDivisor {
             return -1;
         }
         int gcd = 1;
-        for (int i = 1; i < first && i < second; i++) {
+        for (int i = 1; i <= first && i <= second; i++) {
             if (first % i == 0 && second % i == 0) {
                 gcd = i;
             }
