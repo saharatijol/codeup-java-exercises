@@ -14,22 +14,22 @@ public class GradesApplication {
         student1.addGrade(82);
         students.put("jenniPho", student1);
 
-        Student student2 = new Student("Jennifer");
-        student2.addGrade(72);
-        student2.addGrade(70);
-        student2.addGrade(82);
-        students.put("jenniPho", student2);
+        Student student2 = new Student("James");
+        student2.addGrade(73);
+        student2.addGrade(90);
+        student2.addGrade(93);
+        students.put("JamesBlonde", student2);
 
-        Student student3 = new Student("Jennifer");
-        student3.addGrade(72);
+        Student student3 = new Student("Amadeus");
+        student3.addGrade(93);
+        student3.addGrade(87);
         student3.addGrade(70);
-        student3.addGrade(82);
-        students.put("jenniPho", student3);
+        students.put("immadayWho13", student3);
 
-        Student student4 = new Student("Jennifer");
-        student4.addGrade(72);
-        student4.addGrade(70);
-        student4.addGrade(82);
-        students.put("jenniPho", student4);
+        Student student4 = new Student("Brad");
+        student4.addGrade(90);
+        student4.addGrade(85);
+        student4.addGrade(87);
+        students.put("breadPitt2020", student4);
     }
 }
