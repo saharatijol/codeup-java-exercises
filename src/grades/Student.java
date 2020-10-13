@@ -36,5 +36,25 @@ public class Student {
         Student student1 = new Student ("Lydia");
         Student student2 = new Student ("Josh");
 
+        student1.addGrade(90);
+        student1.addGrade(82);
+        student1.addGrade(85);
+        student1.addGrade(73);
+        student1.addGrade(88);
+
+        student2.addGrade(72);
+        student2.addGrade(77);
+        student2.addGrade(92);
+        student2.addGrade(70);
+        student2.addGrade(70);
+
+        System.out.println(student1.getName());
+        System.out.println(student1.grades);
+        System.out.println(student1.getGradeAverage() + "\n");
+
+        System.out.println(student2.getName());
+        System.out.println(student2.grades);
+        System.out.println(student2.getGradeAverage());
+
     }
 }
