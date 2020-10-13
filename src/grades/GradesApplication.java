@@ -35,20 +35,25 @@ public class GradesApplication {
         students.put("breadPitt2020", student4);
 
         Input userInput = new Input();
+        boolean again;
+        do {
+            System.out.println("Welcome! \n" + "Here are the GitHub usernames of our students:");
 
-        System.out.println("Welcome! \n" + "Here are the GitHub usernames of our students:\n");
+            for (String username : students.keySet()) {
+                System.out.printf(" |%s| ", username);
+            }
 
-        for (String username : students.keySet()) {
-            System.out.printf("| %s ", username);
-        }
+            System.out.println();
+            String usernameEnt = userInput.getString("\nWhat student would you like to see more information on?");
 
-        System.out.println();
-        String usernameEnt = userInput.getString("What student would you like to see more information on?");
+            if (!students.containsKey(usernameEnt)) {
+                System.out.printf("Sorry, no student found with that Github user name of \"%s\" \n", usernameEnt);
+            } else {
+                System.out.printf("Name: %s - Github Username: %s\nCurrent Average: %.2f \n", students.get(usernameEnt).getName(), usernameEnt, students.get(usernameEnt).getGradeAverage());
+            }
 
-        if(!students.containsKey(usernameEnt)) {
-            System.out.printf("Sorry, no student found with that Github user name of \"%s\" \n", usernameEnt);
-        }
-        System.out.printf("Name: %s - Github Username: %s \n Current Average: %d", students.usernameEnt.getName(), usernameEnt, students.usernameEnt.getGradeAverage());
-
+            again = userInput.yesNo("Would you like to see another student?");
+        } while (again);
+        System.out.println("Goodbye, and have a wonderful day!");
     }
 }

@@ -25,7 +25,7 @@ public class Student {
     }
 
     public double getGradeAverage() {
-        int sum = 0;
+        double sum = 0;
         for (Integer grade : this.grades) {
             sum += grade;
         }
