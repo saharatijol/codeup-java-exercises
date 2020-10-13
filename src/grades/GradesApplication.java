@@ -42,9 +42,13 @@ public class GradesApplication {
             System.out.printf("| %s ", username);
         }
 
-        System.out.println("\nWhat student would you like to see more information on? \n");
-        //String typedKey = userInput.getString();
+        System.out.println();
+        String userTypedKey = userInput.getString("What student would you like to see more information on?");
 
+        if(students.containsKey(userTypedKey)) {
+            System.out.printf("Sorry, no student found with that Github user name of \"%s\" \n", userTypedKey);
+        }
+        System.out.printf("Name: %s - Github Username: %s \n Current Average: %d", students.get(username));
 
     }
 }
