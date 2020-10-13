@@ -1,5 +1,7 @@
 package grades;
 
+import util.Input;
+
 import java.util.HashMap;
 
 public class GradesApplication {
@@ -31,5 +33,18 @@ public class GradesApplication {
         student4.addGrade(85);
         student4.addGrade(87);
         students.put("breadPitt2020", student4);
+
+        Input userInput = new Input();
+
+        System.out.println("Welcome! \n" + "Here are the GitHub usernames of our students:\n");
+
+        for (String username : students.keySet()) {
+            System.out.printf("| %s ", username);
+        }
+
+        System.out.println("\nWhat student would you like to see more information on? \n");
+        //String typedKey = userInput.getString();
+
+
     }
 }
