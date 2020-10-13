@@ -61,6 +61,15 @@ public class CollectionsLec {
         System.out.println("(usernames.get(\"fmendozaro\") = " + usernames.get("fmendozaro"));
         System.out.println("(usernames.get(\"ryanorsinger\") = " + usernames.get("ryanorsinger")); // -> null
         System.out.println("(usernames.getOrDefault(\"ryanorsinger\") = " + usernames.getOrDefault("ryanorsinger", "N/A"));
+
+        if(usernames.containsKey("ryanorsinger")) {
+            System.out.println("usernames.get(\"ryanorsinger\") = " + usernames.get("ryanorsinger"));
+            System.out.println("Login into the system");
+        } else {
+            System.out.println("User not found");
+            System.out.println("Roll back transaction");
+            System.out.println("Ask again");
+        }
     }
 
 //    public static ArrayList<Post> myOwnAdd(String title, ArrayList<String> authors) {
