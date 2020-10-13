@@ -7,9 +7,9 @@ public class Student {
     private ArrayList<Integer> grades;
 
     // Constructor
-    public Student (String name, ArrayList<Integer> grades) {
+    public Student (String name) {
         this.name = name;
-        this.grades = grades;
+        this.grades = new ArrayList<>();
     }
 
     public void setName(String name) {
@@ -30,5 +30,11 @@ public class Student {
             sum += grade;
         }
         return sum / this.grades.size();
+    }
+
+    public static void main(String[] args) {
+        Student student1 = new Student ("Lydia");
+        Student student2 = new Student ("Josh");
+
     }
 }
