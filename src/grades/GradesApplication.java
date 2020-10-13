@@ -43,12 +43,12 @@ public class GradesApplication {
         }
 
         System.out.println();
-        String userTypedKey = userInput.getString("What student would you like to see more information on?");
+        String usernameEnt = userInput.getString("What student would you like to see more information on?");
 
-        if(students.containsKey(userTypedKey)) {
-            System.out.printf("Sorry, no student found with that Github user name of \"%s\" \n", userTypedKey);
+        if(!students.containsKey(usernameEnt)) {
+            System.out.printf("Sorry, no student found with that Github user name of \"%s\" \n", usernameEnt);
         }
-        System.out.printf("Name: %s - Github Username: %s \n Current Average: %d", students.get(username));
+        System.out.printf("Name: %s - Github Username: %s \n Current Average: %d", students.usernameEnt.getName(), usernameEnt, students.usernameEnt.getGradeAverage());
 
     }
 }
