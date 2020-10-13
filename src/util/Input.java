@@ -15,6 +15,14 @@ public class Input {
         return typedString;
     }
 
+    // Optional String prompt
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        String typedString = scanner.nextLine();
+
+        return typedString;
+    }
+
     public boolean yesNo() {
         System.out.println("yey or nay?: ");
         String choice = scanner.nextLine();
