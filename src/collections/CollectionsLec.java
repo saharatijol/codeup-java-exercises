@@ -3,6 +3,7 @@ package collections;
 import oopLecture.Post;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CollectionsLec {
 
@@ -44,6 +45,22 @@ public class CollectionsLec {
                 post.printTitleAndAuthor();
             }
         }
+
+        // Hash Map Example Call
+        hashMapsPractice();
+
+    }
+
+    public static void hashMapsPractice(){
+        HashMap<String, String> usernames = new HashMap<>();
+        usernames.put("fmendozaro", "Fernando M R");
+        usernames.putIfAbsent("fmendozaro", "Fernando Mendoza R");
+        usernames.put("zgulde", "Zach Gulde");
+        usernames.put("zguldes", "Zach Gulde");
+
+        System.out.println("(usernames.get(\"fmendozaro\") = " + usernames.get("fmendozaro"));
+        System.out.println("(usernames.get(\"ryanorsinger\") = " + usernames.get("ryanorsinger")); // -> null
+        System.out.println("(usernames.getOrDefault(\"ryanorsinger\") = " + usernames.getOrDefault("ryanorsinger", "N/A"));
     }
 
 //    public static ArrayList<Post> myOwnAdd(String title, ArrayList<String> authors) {
