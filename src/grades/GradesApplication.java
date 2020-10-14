@@ -36,9 +36,10 @@ public class GradesApplication {
 
         Input userInput = new Input();
         boolean again;
-        do {
-            System.out.println("Welcome! \n" + "Here are the GitHub usernames of our students:");
+        System.out.println("Welcome!");
 
+        do {
+            System.out.println(("Here are the GitHub usernames of our students:"));
             for (String username : students.keySet()) {
                 System.out.printf(" |%s| ", username);
             }
