@@ -122,11 +122,11 @@ public class Input {
 
     // Exceptions Exercise
     public int getInt() {
-        System.out.println("Give me number: ");
+//        System.out.println("Give me number: ");
 //        int number = parseInt(scanner.nextLine());
         int number;
         try {
-            number = Integer.valueOf(getString());
+            number = Integer.valueOf(getString("Give me a number: "));
             return number;
         } catch (NumberFormatException e) {
             System.out.println("Something went wrong.. Try again.. ");
@@ -135,13 +135,13 @@ public class Input {
     }
 
     public double getDouble() {
-        System.out.println("Enter a number with decimal: ");
+        // System.out.println("Enter a number with decimal: ");
         double numDouble;
         try {
-            numDouble = Double.valueOf(getString());
+            numDouble = Double.valueOf(getString("Enter a number with decimal: "));
             return numDouble;
         } catch (NumberFormatException e) {
-            System.out.println("Something went wrong.. Try again.. ");
+            System.out.println("Something went wrong (double).. Try again.. ");
             return getDouble();
         }
     }

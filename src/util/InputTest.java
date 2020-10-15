@@ -12,7 +12,7 @@ public class InputTest {
 //        System.out.println(input2.getDouble());
 
         // Exceptions Exercise
-//        System.out.println(input2.getInt());
+        System.out.println(input2.getInt());
         System.out.println(input2.getDouble());
     }
 }
