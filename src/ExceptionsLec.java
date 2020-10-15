@@ -19,21 +19,32 @@ public class ExceptionsLec {
     static void dangerZone() {
         System.out.println("Start dangerZone");
         // danger code
-//        System.out.println("Tenth color is: " + colors[9]); // ArrayIndexOutOfBoundsException
-//        int numHello = new Integer("hello"); // NumberFormatException
-        // Below another NumberFormatException
-//        Input input = new Input();
-//        int nameInt = input.getInt("Please enter your name: ");
-//        System.out.println("nameInt = " + nameInt);
-//        int num = 1 / 0; // ArithmeticException
+        try {
+            System.out.println("Tenth color is: " + colors[9]); // ArrayIndexOutOfBoundsException
+            int numHello = new Integer("hello"); // NumberFormatException
+            // Below another NumberFormatException
+            Input input = new Input();
+            int nameInt = input.getInt("Please enter your name: ");
+            System.out.println("nameInt = " + nameInt);
+            int num = 1 / 0; // ArithmeticException
 
-        // NullPointerException
-//        if (hello.equals("hello")) {
-//            System.out.println("Hello!");
-//        }
+            // NullPointerException
+            if (hello.equals("hello")) {
+                System.out.println("Hello!");
+            }
 
-        for (String color : colors) {
-            System.out.printf("Hex value of color %s is %s\n", color, getColorHexValue(color));
+            for (String color : colors) {
+                System.out.printf("Hex value of color %s is %s\n", color, getColorHexValue(color));
+            }
+        } catch (ArrayIndexOutOfBoundsException aibex) {
+            System.out.println("ArrayIndexOutOfBounds Exception");
+            System.out.println(aibex.getMessage());
+        } catch (NumberFormatException nfex) {
+            System.out.println("Number Format Exception");
+            System.out.println(nfex.getMessage());
+//        } catch (Exception ex) {
+//            System.out.println(ex.getMessage());
+//            ex.printStackTrace();
         }
         System.out.println("Finish dangerZone");
     }
@@ -48,12 +59,17 @@ public class ExceptionsLec {
                 return "000011";
             default:
                 throw new IllegalArgumentException("Unknown Color"); // Creating Exceptions
+                // or RuntimeException
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         System.out.println("Hello World");
-        first();
+        //first();
+        if (Math.floor(Math.random() * 3) == 0)
+        throw new Exception("A problem happened");
         System.out.println("Program Finished Successfully. Yay!!");
     }
 }
+
+class BIOException extends Exception {}
