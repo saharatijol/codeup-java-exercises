@@ -74,11 +74,11 @@ public class Input {
         }
     }
 
-    public int getInt() {
-        System.out.println("Give me number: ");
-        int number = parseInt(scanner.nextLine());
-        return number;
-    }
+//    public int getInt() {
+//        System.out.println("Give me number: ");
+//        int number = parseInt(scanner.nextLine());
+//        return number;
+//    }
 
     // Optional String prompt
     public int getInt(String prompt) {
@@ -106,11 +106,11 @@ public class Input {
 
     }
 
-    public double getDouble() {
-        System.out.println("Enter a number with decimal: ");
-        double numDouble = parseDouble(scanner.nextLine());
-        return numDouble;
-    }
+//    public double getDouble() {
+//        System.out.println("Enter a number with decimal: ");
+//        double numDouble = parseDouble(scanner.nextLine());
+//        return numDouble;
+//    }
 
     // Optional String prompt
     public double getDouble(String prompt) {
@@ -120,4 +120,29 @@ public class Input {
         return numDouble;
     }
 
+    // Exceptions Exercise
+    public int getInt() {
+        System.out.println("Give me number: ");
+//        int number = parseInt(scanner.nextLine());
+        int number;
+        try {
+            number = Integer.valueOf(getString());
+            return number;
+        } catch (NumberFormatException e) {
+            System.out.println("Something went wrong.. Try again.. ");
+            return getInt();
+        }
+    }
+
+    public double getDouble() {
+        System.out.println("Enter a number with decimal: ");
+        double numDouble;
+        try {
+            numDouble = Double.valueOf(getString());
+            return numDouble;
+        } catch (NumberFormatException e) {
+            System.out.println("Something went wrong.. Try again.. ");
+            return getDouble();
+        }
+    }
 }
