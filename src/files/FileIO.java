@@ -14,11 +14,11 @@ public class FileIO {
 
         // We have to create a directory or folder first BEFORE we get to create our file
         if (Files.notExists(directoryPath)) { //1. checks if directory does NOT exists
-            Files.createDirectories(directoryPath); // Create Path
+            Files.createDirectories(directoryPath); // Creates Path
         }
 
         if (!Files.exists(dataFilePath)) { //2. checks if filename itself does NOT exists
-            Files.createFile(dataFilePath); // Create File
+            Files.createFile(dataFilePath); // Creates File
         }
         return dataFilePath;
     }
@@ -45,5 +45,17 @@ public class FileIO {
             }
             Files.write(filePath, modifiedList);
         }
+    }
+
+    public static void deleteLine(Path filePath, String line) throws IOException{
+        List<String> fileContents = Files.readAllLines(filePath);
+        List<String> modifiedList = new ArrayList<>(); // cleared it out
+        for (String item: fileContents) {
+            // TODO: I want to remove bread from the list
+            if(!item.equals("bread")) {
+                modifiedList.add(item);
+            }
+        }
+        Files.write(filePath, modifiedList);
     }
 }

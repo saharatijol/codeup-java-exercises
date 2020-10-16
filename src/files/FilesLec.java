@@ -16,17 +16,10 @@ public class FilesLec {
         String directoryName = "data";
         String fileName = "grocery_list.txt";
 
-        // We moved these declarations to the FileIO class:
-        // Path directoryPath = Paths.get(directoryName);
-        // Path dataFilePath = Paths.get(directoryName, fileName);
-
-        // Here, we create our own path
-        // This is an interface, therefore we can't instantiate it
-
         // This will create grocery_list.txt in the project folder directly
         //Path dataFilePath = Paths.get(fileName);
 
-        // OUTPUT the path
+        // OUTPUT the path - DON'T DO THIS
         // dataFilePath.getFileName();
 
         // Files.createFile(dataFilePath);
@@ -54,26 +47,19 @@ public class FilesLec {
 
             // To edit our file
             // 1. Read a file in.
-            // First, let's try to replace a line the file
+            // 2. then, replace a line on file
             FileIO.updateLine(dataFilePath, "milks", "whole milk");
             FileIO.printFileContents(dataFilePath);
 
             // Remove a line from the file
-            List<String> fileContents = Files.readAllLines(dataFilePath);
-            System.out.println();
-            List<String> modifiedList = new ArrayList<>(); // cleared it out
-            for (String item: fileContents) {
-                // TODO: I want to remove bread from the list
-                if(!item.equals("bread")) {
-                    modifiedList.add(item);
-                }
-            }
-            Files.write(dataFilePath, modifiedList);
-            fileContents = Files.readAllLines(dataFilePath);
-            System.out.println();
-            for (int i = 0; i < fileContents.size(); i++) {
-                System.out.printf("%d: %s\n", i + 1, fileContents.get(i));
-            }
+            FileIO.deleteLine(dataFilePath, "bread");
+            FileIO.printFileContents(dataFilePath);
+
+            // To Empty List
+            Files.write(dataFilePath, new ArrayList<>());
+            System.out.println("After empty");
+            FileIO.printFileContents(dataFilePath);
+
         } catch (IOException ex) {
             System.out.println("Cannot create file");
             ex.printStackTrace();
