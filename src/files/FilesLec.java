@@ -16,9 +16,10 @@ public class FilesLec {
         String directoryName = "data";
         String fileName = "grocery_list.txt";
 
+        // We moved these declarations to the FileIO class:
+        // Path directoryPath = Paths.get(directoryName);
+        // Path dataFilePath = Paths.get(directoryName, fileName);
 
-        Path directoryPath = Paths.get(directoryName);
-        Path dataFilePath = Paths.get(directoryName, fileName);
         // Here, we create our own path
         // This is an interface, therefore we can't instantiate it
 
@@ -32,15 +33,8 @@ public class FilesLec {
         // This will break bec Java does not know we are creating a file, it does not recognize it
 
         // We have to create a directory or folder first BEFORE we get to create our file
-
         try { // Try to catch exception if we are out of disk space
-            if (Files.notExists(directoryPath)) { //1. checks if directory does NOT exists
-                Files.createDirectories(directoryPath); // Create Path
-            }
-
-            if (!Files.exists(dataFilePath)) { //2. checks if filename itself does NOT exists
-                Files.createFile(dataFilePath); // Create File
-            }
+           Path dataFilePath = FileIO.createDirectoryAndFile(directoryName, fileName);
 
             // Let's write to our file
             List<String> groceryList = Arrays.asList("milks", "eggs", "bacon");
