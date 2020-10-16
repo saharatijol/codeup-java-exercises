@@ -41,49 +41,29 @@ public class FilesLec {
             Files.write(dataFilePath, groceryList);
 
             // Let's read our file
-            List<String> fileContents = Files.readAllLines(dataFilePath);
-            for (int i = 0; i < fileContents.size(); i++) {
-                System.out.printf("%d: %s\n", i + 1, fileContents.get(i));
-            }
+//            List<String> fileContents = Files.readAllLines(dataFilePath);
+//            for (int i = 0; i < fileContents.size(); i++) {
+//                System.out.printf("%d: %s\n", i + 1, fileContents.get(i));
+//            }
+            // Now, let's refactor the loop above
+            FileIO.printFileContents(dataFilePath);
 
             // Append to the file. StandardOpenOption.APPEND will prevent overwriting
             Files.write(dataFilePath, Arrays.asList("cereal", "bread"), StandardOpenOption.APPEND);
-            fileContents = Files.readAllLines(dataFilePath);
-            System.out.println();
-            for (int i = 0; i < fileContents.size(); i++) {
-                System.out.printf("%d: %s\n", i + 1, fileContents.get(i));
-            }
+            FileIO.printFileContents(dataFilePath);
 
             // To edit our file
             // 1. Read a file in.
             // First, let's try to replace a line the file
-            fileContents = Files.readAllLines(dataFilePath);
-            List<String> modifiedList = new ArrayList<>();
-            for (String item : fileContents) {
-                // TODO: Add my modified item
-                if(item.equals("milks")) {
-                    modifiedList.add("whole milk");
-                } else {
-                // TODO: Add the existing item bec it isn't what we want to replace.
-                    modifiedList.add(item);
-                    //System.out.println("did not find that item");
-                }
-                Files.write(dataFilePath, modifiedList);
-                // Let's see what happens by printing it out
-                System.out.println();
-                fileContents = Files.readAllLines(dataFilePath);
-                System.out.println();
-                for (int i = 0; i < fileContents.size(); i++) {
-                    System.out.printf("%d: %s\n", i + 1, fileContents.get(i));
-                }
-            }
+            FileIO.updateLine(dataFilePath, "milks", "whole milk");
+            FileIO.printFileContents(dataFilePath);
 
             // Remove a line from the file
-            fileContents = Files.readAllLines(dataFilePath);
+            List<String> fileContents = Files.readAllLines(dataFilePath);
             System.out.println();
-            modifiedList = new ArrayList<>(); // cleared it out
+            List<String> modifiedList = new ArrayList<>(); // cleared it out
             for (String item: fileContents) {
-                // TODO I want to remove bread from the list
+                // TODO: I want to remove bread from the list
                 if(!item.equals("bread")) {
                     modifiedList.add(item);
                 }
