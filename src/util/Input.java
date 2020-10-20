@@ -119,5 +119,4 @@ public class Input {
 
         return numDouble;
     }
-
 }
