@@ -1,6 +1,7 @@
 public class Main {
 
     public static void main(String[] args) {
+        // Calculator test
 //        SimpleCalculator calculator = new SimpleCalculator();
 //        calculator.setFirstNumber(5.0);
 //        calculator.setSecondNumber(4);
@@ -12,18 +13,21 @@ public class Main {
 //        System.out.println("calculator.getMultiplicationResult() = " + calculator.getMultiplicationResult());
 //        System.out.println("calculator.getDivisionResult() = " + calculator.getDivisionResult());
 
-        Person person = new Person();
-        person.setFirstName("");
-        person.setLastName("");
-        person.setAge(10);
-        System.out.println("person.getFullName() = " + person.getFullName());
-        System.out.println("person.isTeen() = " + person.isTeen());
+        // Person Test
+//        Person person = new Person();
+//        person.setFirstName("");
+//        person.setLastName("");
+//        person.setAge(10);
+//        System.out.println("person.getFullName() = " + person.getFullName());
+//        System.out.println("person.isTeen() = " + person.isTeen());
+//
+//        person.setFirstName("Dylan");
+//        person.setLastName("Johnson");
+//        person.setAge(19);
+//        System.out.println("person.getFullName() = " + person.getFullName());
+//        System.out.println("person.isTeen() = " + person.isTeen());
 
-        person.setFirstName("Dylan");
-        person.setLastName("Johnson");
-        person.setAge(19);
-        System.out.println("person.getFullName() = " + person.getFullName());
-        System.out.println("person.isTeen() = " + person.isTeen());
+        // Bank Account Test
 
 
     }
