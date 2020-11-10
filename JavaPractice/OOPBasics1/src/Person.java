@@ -25,7 +25,7 @@ public class Person {
     }
 
     public void setAge(int age) {
-        if ((this.age < 0) || (this.age > 100)) {
+        if ((age < 0) || (age > 100)) {
             this.age = 0;
         } else {
             this.age = age;
@@ -37,11 +37,11 @@ public class Person {
     }
 
     public String getFullName() {
-        if ((this.firstName == null) && (this.lastName == null)) {
-            return " ";
-        } else if (this.firstName == null) {
+        if ((this.firstName.isEmpty()) && (this.lastName.isEmpty())) {
+            return "";
+        } else if (this.firstName.isEmpty()) {
             return String.format("%s", this.lastName);
-        } else if (this.lastName == null) {
+        } else if (this.lastName.isEmpty()) {
             return String.format("%s", this.firstName);
         } else {
             return String.format("%s %s", this.firstName, this.lastName);
