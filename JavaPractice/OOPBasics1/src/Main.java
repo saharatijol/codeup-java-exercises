@@ -34,5 +34,18 @@ public class Main {
         bobsAccount.deposit(50.00);
         bobsAccount.withdrawal(100.00);
 
+        bobsAccount.deposit(51.00);
+        bobsAccount.withdrawal(100.00);
+
+        // Account Constructor Test instead of using setters redundantly
+        Account sallyAccount = new Account(321654321, 50.23, "sally", "sally@gmail.com", 1231231234);
+        System.out.println("sallyAccount.getPhone_no() = " + sallyAccount.getPhone_no());
+        System.out.println("sallyAccount.getBalance() = " + sallyAccount.getBalance());
+
+        Account defaultAccount = new Account();
+
+        Account timAccount = new Account("Tim", "tim@email.com", 1085687896);
+        System.out.println("Name: " + timAccount.getCustomer_name());
+        System.out.println("Phone: " + timAccount.getPhone_no());
     }
 }

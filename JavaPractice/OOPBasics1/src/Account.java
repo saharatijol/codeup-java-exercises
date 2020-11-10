@@ -6,6 +6,27 @@ public class Account {
     private String email;
     private long phone_no;
 
+    // Constructor w/o parameter
+    public Account() {
+        this(766453758, 0.00, "Unknown", "Default email", 0000000);
+        //System.out.println("Empty constructor called");
+    }
+
+    // Overloaded Constructor w/ parameters
+    public Account(long account_no, double balance, String customer_name, String email, long phone_no) {
+        System.out.println("Account constructor with parameters called");
+        this.account_no = account_no;
+        this.balance = balance;
+        this.customer_name = customer_name;
+        this.email = email;
+        this.phone_no = phone_no;
+    }
+
+    // Another Constructor
+    public Account(String customer_name, String email, long phone_no) {
+        this(99999, 100.55, customer_name, email, phone_no);
+    }
+
     // Create getters and setters for each field
     // Getters
     public long getAccount_no() {
