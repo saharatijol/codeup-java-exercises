@@ -45,4 +45,15 @@ public class BankAccount {
     // 1. allow customer to deposit funds
     // 2. allow customer to withdraw
     // don't allow withdrawal if insufficient funds
+    public double deposit(double money) {
+        return money + this.balance;
+    }
+
+    public double withdraw(double money) {
+        if (this.balance < 0) {
+            return -1;
+        } else {
+            return this.balance - money;
+        }
+    }
 }
