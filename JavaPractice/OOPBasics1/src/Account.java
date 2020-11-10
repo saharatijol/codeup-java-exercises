@@ -1,4 +1,4 @@
-public class BankAccount {
+public class Account {
 
     private long account_no;
     private double balance;
@@ -45,15 +45,17 @@ public class BankAccount {
     // 1. allow customer to deposit funds
     // 2. allow customer to withdraw
     // don't allow withdrawal if insufficient funds
-    public double deposit(double money) {
-        return money + this.balance;
+    public void deposit(double depositAmt) {
+        this.balance += depositAmt;
+        System.out.println("Deposit of $" + depositAmt + " made. New balance: $" + this.balance);
     }
 
-    public double withdraw(double money) {
-        if (this.balance < 0) {
-            return -1;
+    public void withdrawal(double withdrawalAmt) {
+        if (this.balance - withdrawalAmt <= 0) {
+            System.out.println("Insufficient funds. Only $" + this.balance + " available. Withdrawal not processed" );
         } else {
-            return this.balance - money;
+            this.balance -= withdrawalAmt;
+            System.out.println("Withdrawal of $" + withdrawalAmt + " processed. Remaining balance: $" + this.balance);
         }
     }
 }

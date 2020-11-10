@@ -28,7 +28,11 @@ public class Main {
 //        System.out.println("person.isTeen() = " + person.isTeen());
 
         // Bank Account Test
+        Account bobsAccount = new Account();
+        bobsAccount.withdrawal(100.00);
 
+        bobsAccount.deposit(50.00);
+        bobsAccount.withdrawal(100.00);
 
     }
 }
