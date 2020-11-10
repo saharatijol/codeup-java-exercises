@@ -72,7 +72,7 @@ public class Account {
     }
 
     public void withdrawal(double withdrawalAmt) {
-        if (this.balance - withdrawalAmt <= 0) {
+        if (this.balance - withdrawalAmt < 0) {
             System.out.println("Insufficient funds. Only $" + this.balance + " available. Withdrawal not processed" );
         } else {
             this.balance -= withdrawalAmt;
