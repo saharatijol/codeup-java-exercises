@@ -42,4 +42,5 @@ public class Point {
         // Better way:
         // return distance(another.getX(), another.getY());
     }
+
 }
