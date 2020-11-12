@@ -1,6 +1,5 @@
 
 public class Floor {
-
     private double width = 0;
     private double length = 0;
 
@@ -12,4 +11,10 @@ public class Floor {
             this.width = width;
         }
     }
+
+    public double getArea() {
+        return this.width * this.length;
+    }
 }
+
+
