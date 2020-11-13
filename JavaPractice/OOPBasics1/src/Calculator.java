@@ -22,7 +22,6 @@ public class Calculator {
         Floor floor2 = new Floor(5.4, 4.5);
         Calculator calculator2 = new Calculator(floor2, carpet2);
         System.out.println("calculator.getTotalCost() = " + calculator2.getTotalCost());
-
     }
 }
 
