@@ -49,10 +49,10 @@ public class Main {
 //        System.out.println("Phone: " + timAccount.getPhone_no());
 
         // VipCustomer Test
-        VipCustomer timBurton = new VipCustomer("Tim Burton", "lol@gmail.com", 1000.00);
-        System.out.println("timBurton.getName() = " + timBurton.getName());
-        System.out.println("timBurton.getEmail() = " + timBurton.getEmail());
-        System.out.println("timBurton.getCredit_limit() = " + timBurton.getCredit_limit());
+//        VipCustomer timBurton = new VipCustomer("Tim Burton", "lol@gmail.com", 1000.00);
+//        System.out.println("timBurton.getName() = " + timBurton.getName());
+//        System.out.println("timBurton.getEmail() = " + timBurton.getEmail());
+//        System.out.println("timBurton.getCredit_limit() = " + timBurton.getCredit_limit());
 
     }
 }
