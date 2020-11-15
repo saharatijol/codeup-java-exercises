@@ -61,14 +61,26 @@ public class Main {
 //        outlander.accelerate(20);
 //        outlander.accelerate(-42);
 
-        Circle circle = new Circle(3.75);
-        System.out.println("circle.getRadius() = " + circle.getRadius());
-        System.out.println("circle.getArea() = " + circle.getArea());
+//        Circle circle = new Circle(3.75);
+//        System.out.println("circle.getRadius() = " + circle.getRadius());
+//        System.out.println("circle.getArea() = " + circle.getArea());
+//
+//        Cylinder cylinder = new Cylinder(5.55, 7.25);
+//        System.out.println("cylinder.getRadius() = " + cylinder.getRadius());
+//        System.out.println("cylinder.getHeight() = " + cylinder.getHeight());
+//        System.out.println("cylinder.getArea() = " + cylinder.getArea());
+//        System.out.println("cylinder.getVolume() = " + cylinder.getVolume());
 
-        Cylinder cylinder = new Cylinder(5.55, 7.25);
-        System.out.println("cylinder.getRadius() = " + cylinder.getRadius());
-        System.out.println("cylinder.getHeight() = " + cylinder.getHeight());
-        System.out.println("cylinder.getArea() = " + cylinder.getArea());
-        System.out.println("cylinder.getVolume() = " + cylinder.getVolume());
+//        Rectangle rectangle = new Rectangle(5,10);
+//        System.out.println("rectangle.getWidth() = " + rectangle.getWidth());
+//        System.out.println("rectangle.getLength() = " + rectangle.getLength());
+//        System.out.println("rectangle.getArea() = " + rectangle.getArea());
+//
+//        Cuboid cuboid = new Cuboid(5,10,5);
+//        System.out.println("cuboid.getWidth() = " + cuboid.getWidth());
+//        System.out.println("cuboid.getLength() = " + cuboid.getLength());
+//        System.out.println("cuboid.getArea() = " + cuboid.getArea());
+//        System.out.println("cuboid.getHeight() = " + cuboid.getHeight());
+//        System.out.println("cuboid.getVolume() = " + cuboid.getVolume());
     }
 }
