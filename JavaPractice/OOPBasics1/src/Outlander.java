@@ -9,6 +9,7 @@ public class Outlander extends Car{
 
     public void accelerate (int rate) {
         int newVelocity = getCurrentVelocity() + rate;
+        System.out.println("newVelocity = " + newVelocity);
         if (newVelocity == 0) {
             stop();
             changeGear(1);
@@ -23,6 +24,7 @@ public class Outlander extends Car{
         }
 
         if (newVelocity > 0) {
+            //System.out.println("getCurrentDirection() = " + getCurrentDirection());
             changeVelocity(newVelocity, getCurrentDirection());
         }
     }
