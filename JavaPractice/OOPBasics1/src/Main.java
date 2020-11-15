@@ -54,5 +54,8 @@ public class Main {
 //        System.out.println("timBurton.getEmail() = " + timBurton.getEmail());
 //        System.out.println("timBurton.getCredit_limit() = " + timBurton.getCredit_limit());
 
+
+        Outlander outlander = new Outlander(36);
+        outlander.accelerate(30);
     }
 }
