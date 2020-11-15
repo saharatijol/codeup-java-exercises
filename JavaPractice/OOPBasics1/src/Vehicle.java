@@ -1,11 +1,42 @@
 public class Vehicle {
-    private int wheels;
-    private int gears;
-    private int speed;
+    private String name;
+    private String size;
 
-    public Vehicle(int wheels, int gears, int speed){
-        this.wheels = wheels;
-        this.gears = gears;
-        this.speed = speed;
+    private int currentVelocity;
+    private int currentDirection;
+
+    public Vehicle(String name, String size){
+        this.name = name;
+        this.size = size;
+
+        this.currentVelocity = 0;
+        this.currentDirection = 0;
+    }
+
+    public void steer(int direction) {
+        this.currentDirection += direction;
+        System.out.println("Vehicle.steer(): Steering at " + currentDirection + " degrees.");
+    }
+
+    public void move (int velocity, int direction) {
+        this.currentVelocity = velocity;
+        this.currentDirection = direction;
+        System.out.println("Vehicle.move(): Moving at " + currentVelocity + " in direction " + currentDirection);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public int getCurrentVelocity() {
+        return currentVelocity;
+    }
+
+    public int getCurrentDirection() {
+        return currentDirection;
     }
 }
