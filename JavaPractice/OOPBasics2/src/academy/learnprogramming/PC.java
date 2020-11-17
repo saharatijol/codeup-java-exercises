@@ -20,7 +20,7 @@ public class PC {
     }
 
     private void drawLogo() {
-        // FAncy graphics
+        // Fancy graphics
         monitors.drawPixelAt(1200, 50, "yellow");
     }
 
