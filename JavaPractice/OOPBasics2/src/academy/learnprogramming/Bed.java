@@ -1,31 +1,41 @@
 package academy.learnprogramming;
 
 public class Bed {
-    private BedSet bedset;
-    private int legs;
+    private String style;
     private int pillows;
-    private boolean isComfortable;
+    private int height;
+    private int sheets;
+    private int quilts;
 
-    public Bed(BedSet bedset, int legs, int pillows, boolean isComfortable) {
-        this.bedset = bedset;
-        this.legs = legs;
+    public Bed(String style, int pillows, int height, int sheets, int quilts) {
+        this.style = style;
         this.pillows = pillows;
-        this.isComfortable = isComfortable;
+        this.height = height;
+        this.sheets = sheets;
+        this.quilts = quilts;
     }
 
-    public BedSet getBedset() {
-        return bedset;
+    public void make() {
+        System.out.println("Bed -> Making");
     }
 
-    public int getLegs() {
-        return legs;
+    public String getStyle() {
+        return style;
     }
 
     public int getPillows() {
         return pillows;
     }
 
-    public boolean isComfortable() {
-        return isComfortable;
+    public int getHeight() {
+        return height;
+    }
+
+    public int getSheets() {
+        return sheets;
+    }
+
+    public int getQuilts() {
+        return quilts;
     }
 }

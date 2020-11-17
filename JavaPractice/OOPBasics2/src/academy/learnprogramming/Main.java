@@ -14,12 +14,17 @@ public class Main {
 //	    PC thePC = new PC(theCase, theMonitor, theMotherboard);
 //	    thePC.powerUp();
 
-		Lights light = new Lights(3, true, "white");
-		BedSet bedset = new BedSet(4, 5, "Nautical");
-		Dresser dresser = new Dresser(4, true, 12, 20);
-		Bed bed = new Bed(bedset, 4, 4, true);
+		Wall wall1 = new Wall("West");
+		Wall wall2 = new Wall("East");
+		Wall wall3 = new Wall("South");
+		Wall wall4 = new Wall("North");
 
-		Bedroom myBedroom = new Bedroom(light, bed, dresser);
-		myBedroom.makeBed();
+		Ceiling ceiling = new Ceiling(12, 55);
+		Bed bed = new Bed("Modern", 4,3,2,1);
+		Lamp lamp = new Lamp("Classic", false, 75);
+
+		Bedroom bedRoom = new Bedroom("Sara", wall1, wall2, wall3, wall4, ceiling,bed, lamp);
+		bedRoom.makeBed();
+		bedRoom.getLamp().turnOn();
     }
 }
