@@ -28,21 +28,28 @@ public class Main {
 //		bedRoom.getLamp().turnOn();
 
         // NOT Encapsulation
-		Player player1 = new Player();
-		player1.name = "Sahara";
-		player1.health = 20;
-		player1.weapon = "Sword";
-
-		int damage = 10;
-		player1.loseHealth(damage);
-		System.out.println("Remaining health for Player1= " + player1.healthRemaining());
-
-		damage = 11;
-		player1.loseHealth(damage);
-		System.out.println("Remaining health for Player1 = " + player1.healthRemaining());
+//		Player player1 = new Player();
+//		player1.name = "Sahara";
+//		player1.health = 20;
+//		player1.weapon = "Sword";
+//
+//		int damage = 10;
+//		player1.loseHealth(damage);
+//		System.out.println("Remaining health for Player1= " + player1.healthRemaining());
+//
+//		damage = 11;
+//		player1.loseHealth(damage);
+//		System.out.println("Remaining health for Player1 = " + player1.healthRemaining());
 
 		// YES Encapsulation
-        EnhancedPlayer player2 = new EnhancedPlayer("Sara", 200, "Sword");
-        System.out.println("Initial health for Player2 is " + player2.getHealth());
+//        EnhancedPlayer player2 = new EnhancedPlayer("Sara", 200, "Sword");
+//        System.out.println("Initial health for Player2 is " + player2.getHealth());
+
+		Printer printer = new Printer(50, false);
+		System.out.println("initial page count = " + printer.getPagesPrinted());
+		int pagesPrinted = printer.printPages(4);
+		System.out.println("Pages printed was " + pagesPrinted + " new total print count for printer = " + printer.getPagesPrinted());
+		pagesPrinted = printer.printPages(2);
+		System.out.println("Pages printed was " + pagesPrinted + " new total print count for printer = " + printer.getPagesPrinted());
     }
 }
